@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
 *,
 *::before,
 *::after {
@@ -7,34 +9,75 @@
 }
 
 :root {
-  --yellow: #f1be32;
-  --golden-yellow: #feac32;
-  --dark-purple: #110815;
-  --light-grey: #efefef;
+  --dark: #31363f;
+  --darker: #222831;
+  --accent: #76abae;
+  --light: #efefef;
 }
 
 body {
-  background-color: var(--dark-purple);
-  color: var(--light-grey);
+  font-family: "Space Grotesk", monospace;
+  text-transform: uppercase;
+  background-color: var(--darker);
+  color: var(--light);
   text-align: center;
 }
 
+main {
+  /* padding: 2rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.title {
+  padding: 1rem;
+  font-size: 3.5rem;
+  letter-spacing: 0.25rem;
+  transition: 0.5s;
+  cursor: crosshair;
+}
+
+.title:hover {
+  font-size: 4rem;
+  color: var(--accent);
+}
+
 .bg-information-container {
-  margin: 15px 0 25px;
-  font-size: 1.2rem;
+  cursor: copy;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--accent);
+  transition: 0.5s;
+}
+
+.bg-information-container:hover {
+  font-size: 2.5rem;
+  letter-spacing: 0.1rem;
 }
 
 .btn {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  font-family: "Space Grotesk", monospace;
   cursor: pointer;
-  padding: 10px;
-  margin: 10px;
-  color: var(--dark-purple);
-  background-color: var(--golden-yellow);
-  background-image: linear-gradient(#fecc4c, #ffac33);
-  border-color: var(--golden-yellow);
-  border-width: 3px;
+  padding: 1rem 3rem;
+  background-color: var(--dark);
+  color: var(--light);
+  border: none;
+  margin: 0.5rem;
+  transition: 0.5s;
 }
 
 .btn:hover {
-  background-image: linear-gradient(#ffcc4c, #f89808);
+  color: var(--dark);
+  background-color: var(--accent);
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
 }
